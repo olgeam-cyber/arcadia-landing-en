@@ -1,0 +1,56 @@
+# Arcadia Black — Render blueprint (Docker-based Web Service)
+services:
+  - type: web
+    name: arcadia-black-bot
+    env: docker
+    plan: starter
+    autoDeploy: true
+    healthCheckPath: /
+    # Render will build from the Dockerfile in the repo root.
+    envVars:
+      - key: VERIFY_TOKEN
+        sync: false
+      - key: META_WABA_TOKEN
+        sync: false
+      - key: META_PHONE_NUMBER_ID
+        sync: false
+      - key: BRAND_EMAIL
+        sync: false
+      - key: SMTP_HOST
+        sync: false
+      - key: SMTP_PORT
+        sync: false
+      - key: SMTP_USER
+        sync: false
+      - key: SMTP_PASS
+        sync: false
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: STRIPE_SECRET
+        sync: false
+      - key: SUCCESS_URL
+        sync: false
+      - key: CANCEL_URL
+        sync: false
+      - key: RETAINER_DEFAULT
+        sync: false
+      - key: CURRENCY
+        sync: false
+      - key: BANK_BENEFICIARY
+        sync: false
+      - key: BANK_NAME_USD
+        sync: false
+      - key: BANK_ROUTING_ACH
+        sync: false
+      - key: BANK_ACCOUNT
+        sync: false
+      - key: BANK_WIRE_ABA
+        sync: false
+      - key: BANK_SWIFT
+        sync: false
+      - key: WISE_IBAN
+        sync: false
+      - key: WISE_BIC
+        sync: false
+      - key: REF_PREFIX
+        value: "AB"
