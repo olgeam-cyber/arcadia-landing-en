@@ -1,0 +1,15 @@
+{
+  "name": "arcadia-black-bot",
+  "version": "1.0.0",
+  "description": "Arcadia Black \u2014 WhatsApp AI Bot (payments-enabled)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "axios": "^1.7.2",
+    "express": "^4.19.2",
+    "nodemailer": "^6.9.13",
+    "stripe": "^16.6.0"
+  }
+}
